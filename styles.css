@@ -621,6 +621,62 @@ body { font-family: 'Montserrat', sans-serif; background: var(--white); color: v
     }
     .dl-container { grid-template-columns: 1fr; text-align: center; }
 }
+@media (max-width: 768px) {
+    .dl-container {
+        display: flex !important;
+        flex-direction: column; 
+        text-align: center;
+        gap: 40px;
+        padding: 0 10px;
+    }
+
+    .dl-info {
+        order: 1; 
+        text-align: center;
+    }
+
+    .dl-info h2 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+
+    .dl-info p {
+        font-size: 1rem;
+        margin: 0 auto 30px auto; 
+    }
+
+    .dl-platforms {
+        justify-content: center; 
+        flex-direction: column; 
+        align-items: center;
+        gap: 15px;
+    }
+
+    .platform-btn {
+        width: 100%; 
+        max-width: 260px; 
+        justify-content: center;
+        padding: 12px 20px;
+    }
+
+    .dl-visual {
+        order: 2;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .phone-mock {
+        width: 200px; 
+        height: 420px;
+        border-width: 8px;
+    }
+
+    .download-hero {
+        padding: 60px 0;
+        min-height: auto;
+    }
+}
 
 .hidden { display: none; }
 .phone-mock {
