@@ -1,5 +1,16 @@
 const translations = {
   kz: {
+    "nav-resources": "Ресурстар",
+        "res-title": "Жоба ресурстары",
+        "res-intro-text": "Қазақ халқының табиғат-анамен үндес тіршілік кеше отырып қалыптастырған салт-дәстүрі – «адамгершілік» деп аталатын ұлы ұғымның алтын қазығы. Алтын қазықтан адаспай, бетті соған бұрғанда ғана елдіктің іргесі бекіп, адам аты асқақтай түсетінін қазақ елінің өткен өмір жолы дәлелдеп берді.",
+        "res-source-h": "Ғылыми база",
+        "res-source-p": "Барлық дәстүрлер мен олардың сипаттамалары Сейіт Кенжеахметұлының «Қазақтың салт-дәстүрлері мен әдет-ғұрыптары» (қазақ, орыс, ағылшын тілдерінде) еңбегінен алынды.",
+        "res-author-h": "Сейіт Кенжеахметұлы",
+        "res-author-p": "Белгілі қаламгер, этнограф Сейіт Кенжеахметұлы саналы ғұмырын осы бай мұраны жинақтауға арнап, мол қазынаны энциклопедиялық жүйеге түсірді.",
+        "res-info-h": "Мазмұны",
+        "res-info-p": "Бұрын көп айтыла қоймаған ырым мен тыйым, жөн жосық, жол-жоралғы, ұлттық қағида, ғұрып, әдеп мен әдет сараланған.",
+        "nav-about": "Жоба туралы", "nav-features": "Мүмкіндіктер", "nav-team": "Команда", "nav-dl": "Жүктеу", "hero-title": "Ата-баба мұрасын жаңғырт", "hero-desc": "Жаңа ұрпақ үшін жасалған қазақ салт-дәстүрлерінің интерактивті платформасы.", "hero-btn": "Танысуды бастау", "hero-more": "Толығырақ", "val-title": "Dästür құндылығы", "v1-h": "Шынайылық", "v1-p": "Этнографтармен бірлесіп әрбір рәсімді терең зерттеу.", "v2-h": "Цифрландыру", "v2-p": "Дәстүрлер енді ыңғайлы форматта: видео-сабақтардан AI-кеңестерге дейін.", "v3-h": "Қоғамдастық", "v3-p": "Жастарды Қазақстанның мәдени коды төңірегіне біріктіреміз.", "feat-title": "Қолданба функциялары", "f1-h": "Энциклопедия", "f1-p": '"Шілдеханадан" бастап "Беташарға" дейінгі толық каталог.', "f2-h": "Dästür AI", "f2-p": "Ақылды ассистент рәсімдер туралы кез келген сұраққа жауап береді.", "f3-h": "Көптілділік", "f3-p": "Мәдени мұраны әлемге таныту үшін Қазақ, Орыс және Ағылшын тілдеріндегі толық локализация.", "dl-title": "Қолданба әрқашан жаныңда", "dl-desc": "Ғасырлар мұрасын бірге жаңғыртайық.", "footer-text": "© 2026 Dästür.", "sugg-title": "Сирек дәстүрді білесіз бе?", "sugg-desc": "Мұраны сақтауға көмектесіңіз.", "btn-send": "Жіберу", "form-success-text": "Рахмет!", "input-name-ph": "Атыңыз", "input-trad-ph": "Дәстүр атауы", "input-text-ph": "Сипаттама...",
+
     "nav-about": "Жоба туралы",
     "nav-features": "Мүмкіндіктер",
     "nav-team": "Команда",
@@ -36,7 +47,7 @@ const translations = {
     "footer-text": "© 2026 Dästür.",
     "sugg-title": "Сирек дәстүрді білесіз бе?",
     "sugg-desc":
-      "Мұраны сақтауға көмектесіңіз. Опишите обычай, и он появится в Dästür.",
+      "Мұраны сақтауға көмектесіңіз. Әдет-ғұрыпты сипаттаңыз және ол Dästür ішінде пайда болады.",
     "input-name-ph": "Атыңыз",
     "input-trad-ph": "Дәстүр атауы",
     "input-text-ph": "Қысқаша сипаттамасы...",
@@ -44,6 +55,16 @@ const translations = {
     "form-success-text": "Рахмет! Сіздің ұсынысыңыз қабылданды.",
   },
   ru: {
+    "nav-resources": "Ресурсы",
+    "res-title": "Ресурсы проекта",
+    "res-intro-text": "Традиции казахского народа, сформированные в гармонии с природой — это золотой стержень великого понятия «человечность». История доказала, что только верность этим истокам укрепляет государственность и возвышает достоинство человека.",
+    "res-source-h": "Научная база",
+    "res-source-p": "Все традиции и их описания были взяты из книги С. Кенжеахметұлы «Казахские обычаи и традиции» (на казахском, русском и английском языках).",
+    "res-author-h": "Сейит Кенжеахметулы",
+    "res-author-p": "Известный писатель и этнограф, посвятивший жизнь сбору богатого наследия и систематизации его в энциклопедический формат.",
+    "res-info-h": "Содержание",
+    "res-info-p": "В работе проанализированы редкие приметы, запреты, этикет и правила воспитания, составляющие жизненный уклад казахов.",
+
     "nav-about": "О проекте",
     "nav-features": "Возможности",
     "nav-team": "Команда",
@@ -87,6 +108,16 @@ const translations = {
     "form-success-text": "Рахмет! Ваше предложение принято.",
   },
   en: {
+    "nav-resources": "Resources",
+    "res-title": "Project Resources",
+    "res-intro-text": "The traditions of the Kazakh people, formed in harmony with Mother Nature, are the golden foundation of the great concept of 'humanity'. History has proven that staying true to these roots strengthens the nation and elevates human dignity.",
+    "res-source-h": "Scientific Basis",
+    "res-source-p": "All traditions and their descriptions are based on the work of S. Kenzheakhmetuly 'Kazakh Customs and Traditions' (in Kazakh, Russian, and English).",
+    "res-author-h": "Seyit Kenzheakhmetuly",
+    "res-author-p": "A prominent writer and ethnographer who devoted his life to collecting this rich heritage into an encyclopedic system.",
+    "res-info-h": "Content",
+    "res-info-p": "The study analyzes rare omens, prohibitions, national principles, and ethical rules of the Kazakh life and education.",
+
     "nav-about": "About",
     "nav-features": "Features",
     "nav-team": "Team",
@@ -132,29 +163,28 @@ const translations = {
 };
 
 function showPage(pageId, sectionId = null) {
-    const landing = document.getElementById('landing-page');
-    const download = document.getElementById('download-page');
-    const navMenu = document.getElementById('navMenu');
+    const pages = {
+        'landing': document.getElementById('landing-page'),
+        'download': document.getElementById('download-page'),
+        'resources': document.getElementById('resources-page')
+    };
 
-    if (navMenu) navMenu.classList.remove('active');
-    
-    const menuIcon = document.querySelector('#menuToggle i');
-    if (menuIcon) {
-        menuIcon.classList.remove('fa-times');
-        menuIcon.classList.add('fa-bars');
+    Object.values(pages).forEach(page => {
+        if (page) page.classList.add('hidden');
+    });
+
+    const activePage = pages[pageId];
+    if (activePage) {
+        activePage.classList.remove('hidden');
     }
+    const navMenu = document.getElementById('navMenu');
+    if (navMenu) navMenu.classList.remove('active');
 
-    if (pageId === 'download') {
-        landing.classList.add('hidden');
-        download.classList.remove('hidden');
-        window.scrollTo(0, 0); 
+    if (pageId === 'landing' && sectionId) {
+        const section = document.getElementById(sectionId);
+        if (section) section.scrollIntoView({ behavior: 'smooth' });
     } else {
-        download.classList.add('hidden');
-        landing.classList.remove('hidden');
-        if (sectionId) {
-            const section = document.getElementById(sectionId);
-            if (section) section.scrollIntoView({ behavior: 'smooth' });
-        }
+        window.scrollTo(0, 0);
     }
 }
 
@@ -203,7 +233,7 @@ document.getElementById("suggestForm").addEventListener("submit", function (e) {
   btn.disabled = true;
   btn.innerText = "...";
   fetch(
-    "https://script.google.com/macros/s/AKfycbygfUuCL8ZnAW1g0IUbyVpBnVm7aQH_9HVyNNkWrpgEBfNFbrhtXoa-d5LqkIYMb93-/exec",
+    "https://script.google.com/macros/s/AKfycbzZyByPkKMnDIALQAwdn00flFSj9sD4vC2vYvYGTfZSb8tIUubXM5OkyXK8_YgdwrYz/exec",
     {
       method: "POST",
       mode: "no-cors",
