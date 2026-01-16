@@ -1,691 +1,257 @@
-:root {
-    --primary: #00AFCA;
-    --gold: #D4AF37;
-    --dark: #1A202C;
-    --white: #FFFFFF;
-    --gray: #F7FAFC;
-    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --book-thickness: 45px;
-}
-
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Montserrat', sans-serif; background: var(--white); color: var(--dark); overflow-x: hidden; }
-
-
-
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.8rem 5%;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    height: 70px;
-    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
-
-    
-}
-
-.nav-controls {
-    display: flex;
-    align-items: center;
-    gap: 10px; 
-}
-
-#resources-page {
-    padding-top: 100px;
-    min-height: 100vh;
-}
-
-.resource-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    margin-top: 40px;
-}
-.resource-card .card-icon {
-    font-size: 2.5rem;
-    color: var(--primary);
-    margin-bottom: 20px;
-    transition: var(--transition);
-}
-
-.resource-card:hover .card-icon {
-    color: var(--gold);
-    transform: scale(1.1);
-}
-.res-intro-box {
-    max-width: 900px;
-    margin: 20px auto 40px auto; 
-    padding: 25px;
-    border-left: 5px solid #0056b3;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    
-    border-radius: 20px; 
-    
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    
-    line-height: 1.6;
-    color: #000000;
-    border: 1px solid var(--gold, #d4af37) !important;
-    box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
-    
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    cursor: default;
-}
-
-
-.res-intro-box:hover {
-    transform: translateY(-15px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-    background-color: #ffffff;
-}
-
-#res-intro-text {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    margin: 0;
-    font-weight: 500;
-}
-
-.resource-card p {
-    font-size: 0.95rem;
-    line-height: 1.5;
-}
-
-.resource-card strong {
-    color: var(--gold, #d4af37);
-}
-
-.resource-link {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 25px;
-    background-color: var(--primary);
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 0.9rem;
-    transition: var(--transition);
-}
-
-.resource-link:hover {
-    background-color: var(--gold);
-    transform: translateY(-2px);
-}
-
-.menu-toggle {
-    display: none;
-    background: var(--primary); 
-    color: white;
-    border: none;
-    width: 40px;
-    height: 40px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1.2rem;
-    transition: var(--transition);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.lang-switcher button {
-    background: transparent; border: 1px solid var(--primary); color: var(--primary);
-    padding: 4px 8px; cursor: pointer; border-radius: 4px; font-weight: 600; font-size: 0.7rem;
-}
-.lang-switcher button:hover { background: var(--primary); color: white; }
-
-.logo { font-weight: 800; font-size: 1.4rem; color: var(--primary); cursor: pointer; }
-.logo span { color: var(--gold); font-size: 0.7rem; display: block; letter-spacing: 2px; }
-
-.nav-links { display: flex; list-style: none; align-items: center; gap: 30px; }
-.nav-links a { text-decoration: none; color: var(--dark); font-weight: 600; font-size: 0.9rem; transition: var(--transition); }
-.nav-links a:hover { color: var(--primary); }
-
-.btn-download-nav { background: var(--primary); color: white !important; padding: 8px 20px; border-radius: 50px; }
-
-.res-hero-split {
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-    gap: 40px;
-    align-items: center;
-    margin-bottom: 60px;
-}
-
-.res-intro-card {
-    background-color: #f8f9fa;
-    color: #1a1a1a;
-    padding: 40px;
-    border-radius: 30px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-    border-left: 6px solid var(--primary);
-    
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.res-intro-card:hover {
-    transform: translateY(-15px) scale(1.02);
-    box-shadow: 0 25px 50px rgba(0,0,0,0.2);
-    background-color: #ffffff;
-}
-
-#res-intro-text {
-    font-size: 1.15rem;
-    line-height: 1.7;
-    font-weight: 500;
-}
-
-
-.res-hero-split {
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-    gap: 40px;
-    align-items: center;
-    margin-bottom: 60px;
-}
-
-.res-intro-card {
-    background-color: #f8f9fa;
-    color: #1a1a1a;
-    padding: 40px;
-    border-radius: 30px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-    border-left: 6px solid var(--primary);
-    
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.res-intro-card:hover {
-    transform: translateY(-15px) scale(1.02);
-    box-shadow: 0 25px 50px rgba(0,0,0,0.2);
-    background-color: #ffffff;
-}
-
-#res-intro-text {
-    font-size: 1.15rem;
-    line-height: 1.7;
-    font-weight: 500;
-}
-
-
-.book-showcase {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    perspective: 1000px;
-    height: 100%;
-}
-
-.book-container {
-    position: relative;
-    width: 280px;
-    height: 400px;
-    transform-style: preserve-3d;
-    transform: rotateY(-25deg) rotateX(5deg);
-    transition: transform 0.5s ease;
-}
-
-.book-container:hover {
-    transform: rotateY(0deg) rotateX(0deg) scale(1.05);
-}
-
-.book {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 5px 15px 15px 5px;
-    transform-style: preserve-3d;
-    transform: translateZ(0); 
-}
-
-.book::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0; 
-    width: 40px;
-    height: 100%;
-    background: #f0f0f0;
-    background-image: 
-        repeating-linear-gradient(90deg, #e4e4e4, #e4e4e4 2px, #fff 3px, #fff 4px);
-    transform-origin: right;
-    transform: rotateY(-90deg);
-    box-shadow: inset 10px 0 20px rgba(0,0,0,0.1);
-}
-
-.book-cover {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 5px 15px 15px 5px;
-    border: 1px solid rgba(255,255,255,0.2);
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translateZ(0px); 
-    z-index: 2;
-}
-.book::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #444;
-    border-radius: 5px 15px 15px 5px;
-    transform: translateZ(-40px);
-    z-index: 1;
-}
-
-.book-shadow {
-    position: absolute;
-    bottom: -30px;
-    left: 5%;
-    width: 90%;
-    height: 20px;
-    background: rgba(0,0,0,0.3);
-    border-radius: 50%;
-    filter: blur(15px);
-    transform: rotateY(-25deg);
-    transition: all 0.5s ease;
-}
-
-.book-container:hover .book-shadow {
-     transform: rotateY(0deg) scale(0.9);
-     bottom: -40px;
-     background: rgba(0,0,0,0.4);
-}
-
-
-.hero {
-    position: relative;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    background-image: url('https://aqmeshit-aptalygy.kz/wp-content/uploads/2021/05/whatsapp-image-2021-05-04-at-16.58.23.jpeg');
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    z-index: 1;
-}
-
-.hero-content { position: relative; z-index: 1; max-width: 800px; padding: 0 20px; }
-.hero h1 { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; margin-bottom: 1.5rem; line-height: 1.1; }
-.hero p { font-size: 1.2rem; margin-bottom: 2.5rem; opacity: 0.9; }
-
-.hero-btns { display: flex; gap: 15px; justify-content: center; }
-.btn-primary { background: var(--gold); color: white; border: none; padding: 16px 32px; border-radius: 8px; font-weight: 700; cursor: pointer; transition: var(--transition); }
-.btn-outline { background: transparent; border: 2px solid white; color: white; padding: 16px 32px; border-radius: 8px; font-weight: 700; cursor: pointer; transition: var(--transition); }
-.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(212,175,55,0.4); }
-.btn-outline:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(255, 255, 255, 0.4);; }
-
-.section { padding: 100px 10%; }
-.alt-bg { background: var(--gray); }
-.section-title { text-align: center; margin-bottom: 60px; font-size: 2.5rem; font-weight: 800; color: var(--primary); }
-.res-title { text-align: center; margin-bottom: 60px; font-size: 2.5rem; font-weight: 800; color: var(--gold); }
-.card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-
-.team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-}
-
-.team-card {
-    background: white;
-    padding: 40px 20px;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    border: 1px solid rgba(0, 175, 202, 0.1);
-    transition: var(--transition);
-}
-
-.team-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 175, 202, 0.15);
-    border-color: var(--primary);
-}
-
-.member-photo-container {
-    width: 120px;
-    height: 120px;
-    margin: 0 auto 20px;
-    border-radius: 50%;
-    padding: 5px;
-    border: 2px dashed var(--gold);
-}
-
-.member-photo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-}
-
-.team-card h3 {
-    font-size: 1.2rem;
-    color: var(--dark);
-    margin-bottom: 5px;
-}
-
-.member-role {
-    color: var(--primary);
-    font-weight: 600;
-    font-size: 0.9rem;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.member-socials a {
-    color: #cbd5e0;
-    font-size: 1.2rem;
-    margin: 0 10px;
-    transition: var(--transition);
-}
-
-.member-socials a:hover {
-    color: var(--gold);
-}
-
-.suggest-container { max-width: 600px; margin: 0 auto; padding: 40px; }
-.suggest-form { display: flex; flex-direction: column; gap: 15px; margin-top: 20px; }
-.suggest-form input, .suggest-form textarea {
-    padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-family: inherit;
-}
-.success-msg { color: var(--primary); font-weight: bold; margin-top: 20px; }
-
-.glass-card {
-    background: white; padding: 40px; border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: var(--transition);
-    border: 1px solid rgba(0,0,0,0.05); text-align: center;
-}
-.glass-card:hover { transform: translateY(-10px); border-color: var(--primary); }
-.card-icon { font-size: 3rem; color: var(--gold); margin-bottom: 20px; }
-
-.feature-card {
-    background: var(--dark); color: white; padding: 40px; border-radius: 20px;
-    transition: var(--transition);
-}
-.feature-card.highlight { background: var(--primary); }
-.feature-card:hover { transform: scale(1.03); }
-
-.menu-toggle { display: none; background: none; border: none; font-size: 1.5rem; color: var(--primary); cursor: pointer; }
-
-.download-hero {
-    position: relative;
-    min-height: 90vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center;
-    overflow: hidden;
-    
-    background: linear-gradient(135deg, var(--primary) 0%, #007B8C 50%, var(--dark) 100%);
-    background-image: url('https://aqmeshit-aptalygy.kz/wp-content/uploads/2021/05/whatsapp-image-2021-05-04-at-16.58.23.jpeg');
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-}
-
-.dl-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4); 
-    mix-blend-mode: multiply;
-    z-index: 1;
-}
-
-.dl-content {
-    position: relative;
-    z-index: 2;
-    padding: 80px 5%;
-    width: 100%;
-    max-width: 1200px;
-}
-
-.dl-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 60px;
-}
-
-.dl-info {
-    flex: 1;
-    text-align: left;
-}
-
-.dl-info h2 {
-    font-size: clamp(2.2rem, 4vw, 3.5rem);
-    font-weight: 900;
-    margin-bottom: 25px;
-    line-height: 1.2;
-    color: var(--gold);
-}
-
-.dl-info p {
-    font-size: clamp(1rem, 1.5vw, 1.2rem);
-    opacity: 0.9;
-    margin-bottom: 40px;
-    max-width: 500px;
-}
-
-.dl-platforms {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap; 
-    justify-content: flex-start;
-}
-
-.platform-btn {
-    display: flex;
-    align-items: center;
-    background: white;
-    color: var(--dark);
-    padding: 15px 30px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1.1rem;
-    transition: var(--transition);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-.platform-btn i {
-    font-size: 1.5rem;
-    margin-right: 12px;
-}
-
-.platform-btn.google-play { color: #4285F4; }
-.platform-btn.apple-store { color: #A2AAAD; }
-
-.platform-btn:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
-}
-
-.platform-btn.disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-    background: #ccc;
-    color: #888;
-    box-shadow: none;
-}
-.platform-btn.disabled:hover {
-    transform: none;
-    box-shadow: none;
-}
-
-.dl-visual {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.phone-mock {
-    width: 280px;
-    height: 580px;
-    background: #222;
-    border-radius: 40px;
-    padding: 10px;
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4), inset 0 0 0 2px rgba(255, 255, 255, 0.1);
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.phone-screen {
-    width: 100%;
-    height: 100%;
-    border-radius: 30px;
-    overflow: hidden;
-}
-
-.phone-screen img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.fade-in-up {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.8s forwards;
-}
-
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
+const translations = {
+  kz: {
+    "nav-resources": "Ресурстар",
+        "res-title": "Жоба ресурстары",
+        "res-intro-text": "Қазақ халқының табиғат-анамен үндес тіршілік кеше отырып қалыптастырған салт-дәстүрі – «адамгершілік» деп аталатын ұлы ұғымның алтын қазығы. Алтын қазықтан адаспай, бетті соған бұрғанда ғана елдіктің іргесі бекіп, адам аты асқақтай түсетінін қазақ елінің өткен өмір жолы дәлелдеп берді.",
+        "res-source-h": "Ғылыми база",
+        "res-source-p": "Барлық дәстүрлер мен олардың сипаттамалары Сейіт Кенжеахметұлының «Қазақтың салт-дәстүрлері мен әдет-ғұрыптары» (қазақ, орыс, ағылшын тілдерінде) еңбегінен алынды.",
+        "res-author-h": "Сейіт Кенжеахметұлы",
+        "res-author-p": "Белгілі қаламгер, этнограф Сейіт Кенжеахметұлы саналы ғұмырын осы бай мұраны жинақтауға арнап, мол қазынаны энциклопедиялық жүйеге түсірді.",
+        "res-info-h": "Мазмұны",
+        "res-info-p": "Бұрын көп айтыла қоймаған ырым мен тыйым, жөн жосық, жол-жоралғы, ұлттық қағида, ғұрып, әдеп мен әдет сараланған.",
+        "nav-about": "Жоба туралы", "nav-features": "Мүмкіндіктер", "nav-team": "Команда", "nav-dl": "Жүктеу", "hero-title": "Ата-баба мұрасын жаңғырт", "hero-desc": "Жаңа ұрпақ үшін жасалған қазақ салт-дәстүрлерінің интерактивті платформасы.", "hero-btn": "Танысуды бастау", "hero-more": "Толығырақ", "val-title": "Dästür құндылығы", "v1-h": "Шынайылық", "v1-p": "Этнографтармен бірлесіп әрбір рәсімді терең зерттеу.", "v2-h": "Цифрландыру", "v2-p": "Дәстүрлер енді ыңғайлы форматта: видео-сабақтардан AI-кеңестерге дейін.", "v3-h": "Қоғамдастық", "v3-p": "Жастарды Қазақстанның мәдени коды төңірегіне біріктіреміз.", "feat-title": "Қолданба функциялары", "f1-h": "Энциклопедия", "f1-p": '"Шілдеханадан" бастап "Беташарға" дейінгі толық каталог.', "f2-h": "Dästür AI", "f2-p": "Ақылды ассистент рәсімдер туралы кез келген сұраққа жауап береді.", "f3-h": "Көптілділік", "f3-p": "Мәдени мұраны әлемге таныту үшін Қазақ, Орыс және Ағылшын тілдеріндегі толық локализация.", "dl-title": "Қолданба әрқашан жаныңда", "dl-desc": "Ғасырлар мұрасын бірге жаңғыртайық.", "footer-text": "© 2026 Dästür.", "sugg-title": "Сирек дәстүрді білесіз бе?", "sugg-desc": "Мұраны сақтауға көмектесіңіз.", "btn-send": "Жіберу", "form-success-text": "Рахмет!", "input-name-ph": "Атыңыз", "input-trad-ph": "Дәстүр атауы", "input-text-ph": "Сипаттама...",
+
+    "nav-about": "Жоба туралы",
+    "nav-features": "Мүмкіндіктер",
+    "nav-team": "Команда",
+    "nav-dl": "Жүктеу",
+    "hero-title": "Ата-баба мұрасын жаңғырт",
+    "hero-desc":
+      "Жаңа ұрпақ үшін жасалған қазақ салт-дәстүрлерінің интерактивті платформасы.",
+    "hero-btn": "Танысуды бастау",
+    "hero-more": "Толығырақ",
+    "val-title": "Dästür құндылығы",
+    "v1-h": "Шынайылық",
+    "v1-p": "Этнографтармен бірлесіп әрбір рәсімді терең зерттеу.",
+    "v2-h": "Цифрландыру",
+    "v2-p":
+      "Дәстүрлер енді ыңғайлы форматта: видео-сабақтардан AI-кеңестерге дейін.",
+    "v3-h": "Қоғамдастық",
+    "v3-p": "Жастарды Қазақстанның мәдени коды төңірегіне біріктіреміз.",
+    "feat-title": "Қолданба функциялары",
+    "f1-h": "Энциклопедия",
+    "f1-p": '"Шілдеханадан" бастап "Беташарға" дейінгі толық каталог.',
+    "f2-h": "Dästür AI",
+    "f2-p": "Ақылды ассистент рәсімдер туралы кез келген сұраққа жауап береді.",
+    "f3-h": "Көптілділік",
+    "f3-p": "Мәдени мұраны әлемге таныту үшін Қазақ, Орыс және Ағылшын тілдеріндегі толық локализация.",
+    "team-title": "Біздің Команда",
+    "t1-n": "Әлихан Смайылов",
+    "t1-r": "Жоба жетекшісі",
+    "t2-n": "Арман Ибраев",
+    "t2-r": "Full-stack әзірлеуші",
+    "t3-n": "Мәдина Серікова",
+    "t3-r": "UI/UX дизайнері",
+    "dl-title": "Қолданба әрқашан жаныңда",
+    "dl-desc": "Ғасырлар мұрасын бірге жаңғыртайық. AITUCUP-та Dästür-ді бірінші болып сынап көріңіз және цифрлық дәуірдегі дәстүрлеріміздің гүлденуіне өз үлесіңізді қосыңыз.",
+    "footer-text": "© 2026 Dästür.",
+    "sugg-title": "Сирек дәстүрді білесіз бе?",
+    "sugg-desc":
+      "Мұраны сақтауға көмектесіңіз. Әдет-ғұрыпты сипаттаңыз және ол Dästür ішінде пайда болады.",
+    "input-name-ph": "Атыңыз",
+    "input-trad-ph": "Дәстүр атауы",
+    "input-text-ph": "Қысқаша сипаттамасы...",
+    "btn-send": "Жіберу",
+    "form-success-text": "Рахмет! Сіздің ұсынысыңыз қабылданды.",
+  },
+  ru: {
+    "nav-resources": "Ресурсы",
+    "res-title": "Ресурсы проекта",
+    "res-intro-text": "Традиции казахского народа, сформированные в гармонии с природой — это золотой стержень великого понятия «человечность». История доказала, что только верность этим истокам укрепляет государственность и возвышает достоинство человека.",
+    "res-source-h": "Научная база",
+    "res-source-p": "Все традиции и их описания были взяты из книги С. Кенжеахметұлы «Казахские обычаи и традиции» (на казахском, русском и английском языках).",
+    "res-author-h": "Сейит Кенжеахметулы",
+    "res-author-p": "Известный писатель и этнограф, посвятивший жизнь сбору богатого наследия и систематизации его в энциклопедический формат.",
+    "res-info-h": "Содержание",
+    "res-info-p": "В работе проанализированы редкие приметы, запреты, этикет и правила воспитания, составляющие жизненный уклад казахов.",
+
+    "nav-about": "О проекте",
+    "nav-features": "Возможности",
+    "nav-team": "Команда",
+    "nav-dl": "Скачать",
+    "hero-title": "Оживи наследие предков",
+    "hero-desc":
+      "Интерактивная платформа казахских традиций, созданная для нового поколения.",
+    "hero-btn": "Начать знакомство",
+    "hero-more": "Узнать больше",
+    "val-title": "Ценность Dästür",
+    "v1-h": "Аутентичность",
+    "v1-p": "Глубокое исследование каждого обряда совместно с этнографами.",
+    "v2-h": "Цифровизация",
+    "v2-p": "Традиции теперь в удобном формате: от видео-уроков до AI-советов.",
+    "v3-h": "Сообщество",
+    "v3-p": "Объединяем молодежь вокруг культурного кода Казахстана.",
+    "feat-title": "Функции приложения",
+    "f1-h": "Энциклопедия",
+    "f1-p": "Полный каталог: от 'Шілдехана' до 'Беташар'.",
+    "f2-h": "Dästür AI",
+    "f2-p": "Умный ассистент ответит на любой вопрос о правилах обрядов.",
+    "f3-h": "Многоязычность",
+    "f3-p": "Полная локализация на казахский, русский и английский языки для продвижения наследия во всем мире.",
+    "team-title": "Наша Команда",
+    "dl-title": "Приложение всегда с тобой",
+    "dl-desc": "Возродим вековые традиции вместе. Станьте первым испытателем Dästür на AITUCUP и внесите свой вклад в процветание нашей культуры в цифровую эпоху.",
+    "footer-text": "© 2026 Dästür.",
+    "t1-n": "Алихан Смаилов",
+    "t1-r": "Project Manager & Vision",
+    "t2-n": "Арман Ибраев",
+    "t2-r": "Full-stack Developer",
+    "t3-n": "Мадина Серикова",
+    "t3-r": "UI/UX Designer & Content",
+    "sugg-title": "Знаете редкую традицию?",
+    "sugg-desc":
+      "Помогите нам сохранить наследие. Опишите обычай, и он появится в Dästür.",
+    "input-name-ph": "Ваше имя",
+    "input-trad-ph": "Название традиции",
+    "input-text-ph": "Краткое описание...",
+    "btn-send": "Отправить",
+    "form-success-text": "Рахмет! Ваше предложение принято.",
+  },
+  en: {
+    "nav-resources": "Resources",
+    "res-title": "Project Resources",
+    "res-intro-text": "The traditions of the Kazakh people, formed in harmony with Mother Nature, are the golden foundation of the great concept of 'humanity'. History has proven that staying true to these roots strengthens the nation and elevates human dignity.",
+    "res-source-h": "Scientific Basis",
+    "res-source-p": "All traditions and their descriptions are based on the work of S. Kenzheakhmetuly 'Kazakh Customs and Traditions' (in Kazakh, Russian, and English).",
+    "res-author-h": "Seyit Kenzheakhmetuly",
+    "res-author-p": "A prominent writer and ethnographer who devoted his life to collecting this rich heritage into an encyclopedic system.",
+    "res-info-h": "Content",
+    "res-info-p": "The study analyzes rare omens, prohibitions, national principles, and ethical rules of the Kazakh life and education.",
+
+    "nav-about": "About",
+    "nav-features": "Features",
+    "nav-team": "Team",
+    "nav-dl": "Download",
+    "hero-title": "Revive Ancestral Heritage",
+    "hero-desc":
+      "Interactive platform of Kazakh traditions built for the new generation.",
+    "hero-btn": "Get Started",
+    "hero-more": "Learn More",
+    "val-title": "Dästür Values",
+    "v1-h": "Authenticity",
+    "v1-p": "Deep research of every ritual together with ethnographers.",
+    "v2-h": "Digitalization",
+    "v2-p": "Traditions in a handy format: from video lessons to AI tips.",
+    "v3-h": "Community",
+    "v3-p": "Uniting youth around the cultural code of Kazakhstan.",
+    "feat-title": "Key Features",
+    "f1-h": "Encyclopedia",
+    "f1-p": "Full catalog: from 'Shildekhana' to 'Betashar'.",
+    "f2-h": "Dästür AI",
+    "f2-p": "Smart assistant will answer any question about ritual rules.",
+    "f3-h": "Multilingual Support",
+    "f3-p": "Full localization into Kazakh, Russian, and English to promote heritage on a global scale.",
+    "team-title": "Our Team",
+    "t1-n": "Alikhan Smailov",
+    "t1-r": "Project Manager & Visionary",
+    "t2-n": "Arman Ibrayev",
+    "t2-r": "Lead Full-stack Developer",
+    "t3-n": "Madina Serikova",
+    "t3-r": "Product Designer & Researcher",
+    "dl-title": "App is always with you",
+    "dl-desc": "Let's revive centuries-old traditions together. Be the first to test Dästür at AITUCUP and contribute to the prosperity of our culture in the digital age.",
+    "footer-text": "© 2026 Dästür.",
+    "sugg-title": "Know a rare tradition?",
+    "sugg-desc":
+      "Help us preserve the heritage. Describe a custom, and it will appear in Dästür.",
+    "input-name-ph": "Your Name",
+    "input-trad-ph": "Tradition Name",
+    "input-text-ph": "Brief description...",
+    "btn-send": "Submit",
+    "form-success-text": "Thank you! Your suggestion has been received.",
+  },
+};
+
+function showPage(pageId, sectionId = null) {
+    const pages = {
+        'landing': document.getElementById('landing-page'),
+        'download': document.getElementById('download-page'),
+        'resources': document.getElementById('resources-page')
+    };
+
+    Object.values(pages).forEach(page => {
+        if (page) page.classList.add('hidden');
+    });
+
+    const activePage = pages[pageId];
+    if (activePage) {
+        activePage.classList.remove('hidden');
+    }
+    const navMenu = document.getElementById('navMenu');
+    if (navMenu) navMenu.classList.remove('active');
+
+    if (pageId === 'landing' && sectionId) {
+        const section = document.getElementById(sectionId);
+        if (section) section.scrollIntoView({ behavior: 'smooth' });
+    } else {
+        window.scrollTo(0, 0);
     }
 }
 
-@media (max-width: 992px) {
-    .menu-toggle { display: block; }
-    .nav-menu {
-        position: fixed; top: 70px; left: -100%; width: 100%; height: calc(100vh - 70px);
-        background: white; transition: 0.4s; z-index: 999;
-    }
-    .nav-menu.active { left: 0; }
-    .nav-links { flex-direction: column; padding: 40px; gap: 20px; }
-    .hero h1 { font-size: 2.5rem; }
-    .hero-btns { flex-direction: column; }
-    .dl-container {
-        flex-direction: column;
-        text-align: center;
-        gap: 40px;
-    }
-    .dl-info {
-        text-align: center;
-    }
-    .dl-platforms {
-        justify-content: center;
-    }
-    .dl-info p {
-        max-width: none;
-    }
-    .ornament-sidebar {
-        display: none;
-    }
-    .dl-container { grid-template-columns: 1fr; text-align: center; }
-}
-@media (max-width: 768px) {
-    .dl-container {
-        display: flex !important; 
-        flex-direction: column;
-        text-align: center;
-        gap: 40px;
-        padding: 0 10px;
-    }
-
-    .dl-info {
-        order: 1;
-        text-align: center;
-    }
-
-    .dl-info h2 {
-        font-size: 1.8rem;
-        margin-bottom: 15px;
-    }
-
-    .dl-info p {
-        font-size: 1rem;
-        margin: 0 auto 30px auto; 
-    }
-
-    .dl-platforms {
-        justify-content: center; 
-        flex-direction: column; 
-        align-items: center;
-        gap: 15px;
-    }
-
-    .platform-btn {
-        width: 100%;
-        max-width: 260px;
-        justify-content: center;
-        padding: 12px 20px;
-    }
-
-    .dl-visual {
-        order: 2;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-
-    .phone-mock {
-        width: 200px;
-        height: 420px;
-        border-width: 8px;
-    }
-
-    .download-hero {
-        padding: 60px 0;
-        min-height: auto;
-    }
+function scrollToSection(id) {
+  document.getElementById(id).scrollIntoView({ behavior: "smooth" });
 }
 
-.hidden { display: none; }
-.phone-mock {
-    width: 280px; height: 580px; border: 12px solid #333; border-radius: 40px;
-    margin: 0 auto; overflow: hidden; position: relative;
-    box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+function setLanguage(lang) {
+  for (let key in translations[lang]) {
+    const el = document.getElementById(key);
+    if (el) {
+      if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
+        el.placeholder = translations[lang][key];
+      } else {
+        el.innerHTML = translations[lang][key];
+      }
+    }
+  }
+  document.getElementById("input-name").placeholder =
+    translations[lang]["input-name-ph"];
+  document.getElementById("input-tradition").placeholder =
+    translations[lang]["input-trad-ph"];
+  document.getElementById("input-text").placeholder =
+    translations[lang]["input-text-ph"];
+
+  localStorage.setItem("dastur_lang", lang);
 }
-.phone-screen img { width: 100%; height: 100%; object-fit: cover; }
 
-.dl-container { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 50px; }
+document.getElementById("menuToggle").addEventListener("click", () => {
+  document.getElementById("navMenu").classList.toggle("active");
+});
 
-footer { background: var(--dark); color: white; padding: 40px 10%; text-align: center; }
+document.addEventListener("DOMContentLoaded", () => {
+  const savedLang = localStorage.getItem("dastur_lang") || "ru";
+  setLanguage(savedLang);
+});
+
+document.getElementById("suggestForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const name = document.getElementById("input-name").value;
+  const tradition = document.getElementById("input-tradition").value;
+  const description = document.getElementById("input-text").value;
+  const btn = document.getElementById("btn-send");
+
+  btn.disabled = true;
+  btn.innerText = "...";
+  fetch(
+    "https://script.google.com/macros/s/AKfycbzZyByPkKMnDIALQAwdn00flFSj9sD4vC2vYvYGTfZSb8tIUubXM5OkyXK8_YgdwrYz/exec",
+    {
+      method: "POST",
+      mode: "no-cors",
+      cache: "no-cache",
+      body: JSON.stringify({
+        name: name,
+        tradition: tradition,
+        description: description,
+      }),
+    }
+  )
+    .then((response) => {
+      document.getElementById("suggestForm").classList.add("hidden");
+      document.getElementById("form-success").classList.remove("hidden");
+    })
+    .catch((error) => {
+      console.error("Ошибка!", error);
+      btn.disabled = false;
+      btn.innerText = "Ошибка";
+    });
+});
