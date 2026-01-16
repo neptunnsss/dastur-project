@@ -13,13 +13,14 @@
     <header class="navbar">
         <div class="logo" onclick="showPage('landing')">
             DÄSTÜR
+            <span>AITUCAP</span>
         </div>
         
         <nav class="nav-menu" id="navMenu">
             <ul class="nav-links">
                 <li><a href="javascript:void(0)" onclick="showPage('landing', 'sect-values')" id="nav-about">О проекте</a></li>
                 <li><a href="javascript:void(0)" onclick="showPage('landing', 'sect-features')" id="nav-features">Возможности</a></li>
-                <!-- <li><a href="javascript:void(0)" onclick="showPage('landing', 'sect-team')" id="nav-team">Команда</a></li> -->
+                <li><a href="javascript:void(0)" onclick="showPage('resources')" id="nav-resources">Ресурсы</a></li>
                 <li><a href="javascript:void(0)" onclick="showPage('download')" class="btn-download-nav" id="nav-dl">Скачать</a></li>
             </ul>
         </nav>
@@ -37,6 +38,59 @@
     </header>
 
     <div id="content-area">
+        <main id="resources-page" class="hidden">
+            <section class="section">
+                
+                <h2 class="section-title" id="res-title">Ресурсы проекта</h2>
+
+                <div class="res-hero-split">
+                    
+                    <div class="res-left-col">
+                        <div class="res-intro-card">
+                            <p id="res-intro-text">
+                                Қазақ халқының табиғат-анамен үндес тіршілік кеше отырып қалыптастырған салт-дәстүрі – «адамгершілік» деп аталатын ұлы ұғымның алтын қазығы. Алтын қазықтан адаспай, бетті соған бұрғанда ғана елдіктің іргесі бекіп, адам аты асқақтай түсетінін қазақ елінің өткен өмір жолы дәлелдеп берді.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="res-right-col book-showcase">
+                        <div class="book-container">
+                            <div class="book">
+                                <img src="https://s.f.kz/prod/349/348469_1000.jpg" alt="Книга Салт-дәстүрлер" class="book-cover">
+                            </div>
+                            <div class="book-shadow"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="card-grid" style="margin-top: 60px;">
+                    <div class="glass-card resource-card highlight-card">
+                        <div class="card-icon"><i class="fas fa-book-open"></i></div>
+                        <h3 id="res-source-h">Ғылыми база</h3>
+                        <p id="res-source-p">
+                            Барлық дәстүрлер мен олардың сипаттамалары Сейіт Кенжеахметұлының <strong>«Қазақтың салт-дәстүрлері мен әдет-ғұрыптары»</strong> еңбегінен алынды.
+                        </p>
+                    </div>
+
+                    <div class="glass-card resource-card">
+                        <div class="card-icon"><i class="fas fa-user-graduate"></i></div>
+                        <h3 id="res-author-h">Сейіт Кенжеахметұлы</h3>
+                        <p id="res-author-p">
+                            Белгілі қаламгер, этнограф Сейіт Кенжеахметұлы саналы ғұмырын осы бай мұраны жинақтауға арнап, мол қазынаны энциклопедиялық жүйеге түсірді.
+                        </p>
+                    </div>
+
+                    <div class="glass-card resource-card">
+                        <div class="card-icon"><i class="fas fa-feather-alt"></i></div>
+                        <h3 id="res-info-h">Мазмұны</h3>
+                        <p id="res-info-p">
+                            Бұрын көп айтыла қоймаған ырым мен тыйым, жөн жосық, жол-жоралғы, ұлттық қағида, ғұрып, әдеп мен әдет сараланған.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
         <main id="landing-page">
             <section class="hero">
                 <div class="hero-overlay"></div>
@@ -136,7 +190,7 @@
                     <form id="suggestForm" class="suggest-form">
                         <input type="text" id="input-name" required>
                         <input type="text" id="input-tradition" required>
-                        <textarea id="input-text" rows="4"></textarea>
+                        <textarea id="input-text" rows="4" placeholder="Описание традиции"></textarea>
                         <button type="submit" class="btn-primary" id="btn-send">Отправить</button>
                     </form>
                     
@@ -169,7 +223,7 @@
                         <div class="dl-visual fade-in-up" style="transition-delay: 0.6s;">
                             <div class="phone-mock">
                                 <div class="phone-screen">
-                                    <img src="https://via.placeholder.com/300x600?text=Dastur+App+UI" alt="Dastur App UI">
+                                    <img src="https://res.cloudinary.com/dpzy965a9/image/upload/v1768578800/cld-sample-4.jpg" alt="Dastur App UI">
                                 </div>
                             </div>
                         </div>
